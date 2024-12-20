@@ -3,10 +3,11 @@ from datetime import datetime
 import os
 from crew import FinancialAnalystCrew, CryptoCurrencyCrew
 
+url = os.getenv("REDIS_URL")
 celery = Celery(
         "tasks",
-        backend=os.getenv("CELERY_RESULT_BACKEND", "redis://localhost:6379/0"),
-        broker=os.getenv("CELERY_BROKER_URL", "redis://localhost:6379/0"),
+        backend=os.getenv("CELERY_RESULT_BACKEND", url),
+        broker=os.getenv("CELERY_BROKER_URL", url),
 )
 
 
