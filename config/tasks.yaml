@@ -1,0 +1,82 @@
+research_company_task:
+  description: >
+    Use a search tool that pulls data from Yahoo Finance to look up this company's stock information: {company_name}.
+    The goal is to prepare enough up-to-date information from Yahoo Finance to make an informed analysis of the company's stock performance.
+  expected_output: >
+    All of the relevant up-to-date-financial information about the company's stock performance.
+
+research_crypto_task:
+  description: >
+    Use a search tool that pulls data from Yahoo Finance to look up this crypto currency: {company_name}.
+    The goal is to prepare enough up-to-date information from Yahoo Finance to make an informed analysis of the crypto currency.
+  expected_output: >
+    All of the relevant up-to-date-financial information about the crypto currency.
+
+analyse_company_task:
+  description: >
+    Take {company_name}'s stock information, analyse it and provide a financial analysis, including Profitability ratio,
+    Liquidity ratios, Solvency ratios, Efficiency ratios, Growth metrics, Valuation metrics, and Cash Flow metrics
+  expected_output: >
+    A nicely formatted analysis including all of the financial metrics necessary for a thorough stock evaluation.
+
+analyse_crypto_task:
+  description: >
+    Take {company_name}'s crypto information, analyse it and provide a financial analysis, including 
+    previousClose, regularMarketOpen, dayLow, dayHigh, regularMarketDayLow, regularMarketDayHigh,
+    volume, regularMarketVolume, averageVolume, averageVolume10days,
+    fiftyTwoWeekLow, fiftyTwoWeekHigh,
+    fiftyDayAverage, twoHundredDayAverage,
+    marketCap, circulatingSupply
+  expected_output: >
+    A nicely formatted analysis including all of the financial metrics necessary for a thorough stock evaluation.
+
+investment_reccomendation_task:
+  description: >
+    Take {company_name}'s analysis report, based on the metrics in the report,
+
+    Buy signals include: 
+    Strong consistent revenue growth
+    Improving profit margins
+    Low debt levels
+    Positive cash flow
+    Undervalued compared to peers
+
+    Sell signals include: 
+    Declining revenues
+    Increasing debt
+    Negative cash flow
+    Poor management performance
+    Overvalued compared to fundamentals
+    and make a reccomendations based on the above metrics and critical thinking.
+  expected_output: >
+    A buy, sell or hold decision including the reason behind the decision.
+
+crypto_reccomendation_task:
+  description: >
+    Take {company_name}'s analysis report, based on the metrics in the report,
+
+    Buy signals include: 
+    Price Near the 52-Week Low
+    Price Below Key Moving Averages
+    High Trading Volume Near Support Levels
+    Increased Volume Compared to Historical Averages
+    Price Consolidation Near a Support Level
+
+    Sell signals include: 
+    Price Near the 52-Week High
+    Price Above Key Moving Averages with High Volume:
+    Price Reversal from Resistance Levels
+    Declining Volume
+    Price Falls Below Moving Averages
+    Price Drop with Increased Volume
+
+    and make a reccomendations based on the above metrics and critical thinking.
+  expected_output: >
+    A buy, sell or hold decision including the reason behind the decision.
+
+decision_blog_task:
+  description: >
+    Take the investment reccomendation regarding {company_name} generated in the investment_reccomendation_task, format the reccomendation and the reasoning behind the decision
+    In a table-formatted way.
+  expected_output: >
+    A table-formatted blog with the investment decision and the reasoning behind it.
